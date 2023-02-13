@@ -1,10 +1,10 @@
 import classes from "./Input.module.css";
 
-const Input = () => {
+const Input = (props) => {
   return (
     <div className={classes.input}>
-      <label htmlFor="amount">Amount</label>
-      <input id="amount"></input>
+      <label htmlFor={props.input.id}>{props.label}</label>
+      <input {...props.input}></input>
     </div>
   );
 };

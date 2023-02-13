@@ -7,7 +7,17 @@ const MealItemForm = (props) => {
   };
   return (
     <form className={classes.form} onSubmit={submitHandler}>
-      <Input />
+      <Input
+        label="Amount"
+        input={{
+          type: "number",
+          id: "amount" + props.id,
+          min: "1",
+          max: "5",
+          step: "1",
+          defaultValue: "1",
+        }}
+      />
       <button>+ Add</button>
     </form>
   );
